@@ -438,10 +438,10 @@ DATABASES = {
 ENABLE_FTS = False
 
 # Bridged configuration
-bridged_ip = '172.19.0.3'
-BRIDGED_JUDGE_ADDRESS = [(bridged_ip, 9999)]
+SITE_IP = '172.19.0.3'
+BRIDGED_JUDGE_ADDRESS = [(SITE_IP, 9999)]
 BRIDGED_JUDGE_PROXIES = None
-BRIDGED_DJANGO_ADDRESS = [(bridged_ip, 9998)]
+BRIDGED_DJANGO_ADDRESS = [(SITE_IP, 9998)]
 BRIDGED_DJANGO_CONNECT = None
 
 # Event Server configuration

@@ -11,6 +11,8 @@
 # You may use <http://www.miniwebtool.com/django-secret-key-generator/>
 # to generate this key.
 SECRET_KEY = 'This key is not very secure and you should change it.'
+#TODO this is exposed through public repo
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True  # Change to False once you are done with runserver testing.
@@ -144,8 +146,8 @@ TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
 # The judge connection address and port; where the judges will connect to the site.
 # You should change this to something your judges can actually connect to 
 # (e.g., a port that is unused and unblocked by a firewall).
-bridged_ip = '172.19.0.3'
-BRIDGED_JUDGE_ADDRESS = [(bridged_ip, 9999)]
+SITE_IP = '172.19.0.3'
+BRIDGED_JUDGE_ADDRESS = [(SITE_IP, 9999)]
 
 # The bridged daemon bind address and port to communicate with the site.
 #BRIDGED_DJANGO_ADDRESS = [('localhost', 9998)]
