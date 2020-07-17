@@ -35,15 +35,29 @@ CACHES = {
 
 # Your database credentials. Only MySQL is supported by DMOJ.
 # Documentation: <https://docs.djangoproject.com/en/1.11/ref/databases/>
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dmoj',
+#         'USER': 'dmoj',
+#         'PASSWORD': 'dmojpw',
+#         'HOST': 'dmoj-db',
+#         'OPTIONS': {
+#             'charset': 'utf8mb4',
+#             'sql_mode': 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION',
+#         },
+#     }
+# }
+
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dmoj',
+        'NAME': 'dmoj-db',
         'USER': 'dmoj',
         'PASSWORD': 'dmojpw',
         'HOST': 'dmoj-db',
         'OPTIONS': {
-            'charset': 'utf8mb4',
+            'charset': 'utf8',
             'sql_mode': 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION',
         },
     }
@@ -146,7 +160,7 @@ TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
 # The judge connection address and port; where the judges will connect to the site.
 # You should change this to something your judges can actually connect to 
 # (e.g., a port that is unused and unblocked by a firewall).
-SITE_IP = '172.19.0.3'
+SITE_IP = '127.0.0.1'
 BRIDGED_JUDGE_ADDRESS = [(SITE_IP, 9999)]
 
 # The bridged daemon bind address and port to communicate with the site.
@@ -191,6 +205,11 @@ BAD_MAIL_PROVIDERS = set()
 # only after you have a working event server.
 #EVENT_DAEMON_AMQP = '<amqp:// URL to connect to, including username and password>'
 #EVENT_DAEMON_AMQP_EXCHANGE = '<AMQP exchange to use>'
+
+# Celery
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+
 
 ## CDN control.
 # Base URL for a copy of ace editor.
