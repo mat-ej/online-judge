@@ -138,10 +138,10 @@ SERVER_EMAIL = 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
 # webserver to serve the static files. This is the directory where all the 
 # static files DMOJ uses will be collected to.
 # You must configure your webserver to serve this directory as /static/ in production.
-STATIC_ROOT = '/tmp/static'
+STATIC_ROOT = '/var/www/static'
 
 # URL to access static files.
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 # Uncomment to use hashed filenames with the cache framework.
 #STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
@@ -186,7 +186,7 @@ BAD_MAIL_PROVIDERS = set()
 #EVENT_DAEMON_POST = '<ws:// URL to post to>'
 
 # If you are using the defaults from the guide, it is this:
-#EVENT_DAEMON_POST = 'ws://127.0.0.1:15101/'
+# EVENT_DAEMON_POST = 'ws://127.0.0.1:15101/'
 
 # These are the publicly accessed interface configurations.
 # They should match those used by the script.

@@ -438,7 +438,7 @@ DATABASES = {
 ENABLE_FTS = False
 
 # Bridged configuration
-SITE_IP = '172.19.0.3'
+SITE_IP = '127.0.0.1'
 BRIDGED_JUDGE_ADDRESS = [(SITE_IP, 9999)]
 BRIDGED_JUDGE_PROXIES = None
 BRIDGED_DJANGO_ADDRESS = [(SITE_IP, 9998)]
@@ -447,6 +447,7 @@ BRIDGED_DJANGO_CONNECT = None
 # Event Server configuration
 EVENT_DAEMON_USE = False
 EVENT_DAEMON_POST = 'ws://localhost:9997/'
+# EVENT_DAEMON_POST = 'ws://localhost:15101/'
 EVENT_DAEMON_GET = 'ws://localhost:9996/'
 EVENT_DAEMON_POLL = '/channels/'
 EVENT_DAEMON_KEY = None
