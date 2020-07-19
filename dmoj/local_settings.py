@@ -182,7 +182,7 @@ BAD_MAIL_PROVIDERS = set()
 
 ## Event server.
 # Uncomment to enable live updating.
-EVENT_DAEMON_USE = True
+# EVENT_DAEMON_USE = True
 
 # Uncomment this section to use websocket/daemon.js included in the site.
 #EVENT_DAEMON_POST = '<ws:// URL to post to>'
