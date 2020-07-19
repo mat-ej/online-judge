@@ -138,7 +138,7 @@ SERVER_EMAIL = 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
 # webserver to serve the static files. This is the directory where all the 
 # static files DMOJ uses will be collected to.
 # You must configure your webserver to serve this directory as /static/ in production.
-STATIC_ROOT = '/var/www/static'
+STATIC_ROOT = '/home/site/online-judge/static'
 
 # URL to access static files.
 STATIC_URL = '/static/'
