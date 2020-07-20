@@ -15,11 +15,11 @@ SECRET_KEY = 'This key is not very secure and you should change it.'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Change to False once you are done with runserver testing.
+DEBUG = False  # Change to False once you are done with runserver testing.
 
 # Uncomment and set to the domain names this site is intended to serve.
 # You must do this once you set DEBUG to False.
-#ALLOWED_HOSTS = ['dmoj.ca']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dmoj-site']
 
 # Optional apps that DMOJ can make use of.
 INSTALLED_APPS += (
@@ -214,8 +214,8 @@ BAD_MAIL_PROVIDERS = set()
 #EVENT_DAEMON_AMQP_EXCHANGE = '<AMQP exchange to use>'
 
 # Celery
-CELERY_BROKER_URL = 'redis://'+ SITE_IP +':6379'
-CELERY_RESULT_BACKEND = 'redis://'+ SITE_IP +':6379'
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 
 
 ## CDN control.
