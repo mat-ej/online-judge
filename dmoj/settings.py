@@ -25,9 +25,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '5*9f5q57mqmlz2#f$x1h76&jxy#yortjl1v+l*6hd18$d*yx#0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+#TODO fix this to a proper allowed hosts, for now allow all
+ALLOWED_HOSTS = ['*']
 
 SITE_ID = 1
 SITE_NAME = 'DMOJ'
@@ -445,10 +446,9 @@ BRIDGED_DJANGO_ADDRESS = [(SITE_IP, 9998)]
 BRIDGED_DJANGO_CONNECT = None
 
 # Event Server configuration
-EVENT_DAEMON_USE = False
-EVENT_DAEMON_POST = 'ws://localhost:9997/'
-# EVENT_DAEMON_POST = 'ws://localhost:15101/'
-EVENT_DAEMON_GET = 'ws://localhost:9996/'
+EVENT_DAEMON_USE = True
+EVENT_DAEMON_POST = 'ws://localhost:15101/'
+EVENT_DAEMON_GET = 'ws://localhost:15100/'
 EVENT_DAEMON_POLL = '/channels/'
 EVENT_DAEMON_KEY = None
 EVENT_DAEMON_AMQP_EXCHANGE = 'dmoj-events'
