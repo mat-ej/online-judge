@@ -404,3 +404,7 @@ if 'newsletter' in settings.INSTALLED_APPS:
     urlpatterns.append(url(r'^newsletter/', include('newsletter.urls')))
 if 'impersonate' in settings.INSTALLED_APPS:
     urlpatterns.append(url(r'^impersonate/', include('impersonate.urls')))
+
+
+#NOTE added for path consistency
+urlpatterns = [url(r'^challenge/', include(urlpatterns))]
