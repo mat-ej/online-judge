@@ -407,4 +407,4 @@ if 'impersonate' in settings.INSTALLED_APPS:
 
 
 #NOTE added for path consistency
-urlpatterns = [url(r'^challenge/', include(urlpatterns))]
+# urlpatterns = [url(r'^challenge/', include(urlpatterns))]
