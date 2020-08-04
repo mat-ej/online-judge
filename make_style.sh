@@ -1,4 +1,3 @@
-
 #!/bin/bash
 if ! [ -x "$(command -v sass)" ]; then
   echo 'Error: sass is not installed.' >&2
